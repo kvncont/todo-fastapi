@@ -21,7 +21,9 @@
                 "ms-python.isort",
                 "ms-python.pylint",
                 "ms-python.vscode-pylance",
-                "Postman.postman-for-vscode"
+                "Postman.postman-for-vscode",
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
             ],
             "settings": {
                 "editor.bracketPairColorization.enabled": true,
@@ -44,6 +46,7 @@
         }
     },
     "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+    "postStartCommand": "uvicorn app.main:app --reload",
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
     ],
